@@ -1,0 +1,43 @@
+/*  vitepress-demo-preview 插件样式重置 */
+.vitepress-demo-preview__naive-ui__container {
+    border-radius: 8px !important;
+    box-shadow: var(--dome-shadow);
+    border: var(--dome-border);
+    margin: 30px 0;
+}
+
+:root {
+  /* vitepress-demo-preview 默认背景颜色 */
+  --dome-bg: #111;
+  --dome-border: 1x solid var(--component-preview-border);
+  --dome-shadow: 0 0 10px var(--component-preview-border);
+}
+
+.dark{
+  --dome-bg: var(--component-preview-bg);
+  --dome-shadow: none;
+  --dome-border: 1px solid var(--vp-c-brand-lighter);
+}
+
+.vitepress-demo-preview__naive-ui__container div[class*=language-] {
+  background-color: var(--dome-bg);
+}
+
+// .vp-doc [class*='language-'] code {
+//   @apply text-sm;
+// }
+.vitepress-demo-preview-preview{
+  p{
+    margin: 0;
+  }
+}
+/** 图片预览 */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+.outline-marker{
+  width: 2px !important;
+  border-radius: 2px;
+}

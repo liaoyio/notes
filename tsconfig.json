@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    // "types": ["element-plus/global"],
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "./",
+    "esModuleInterop": true,
+    "strict": true
+  },
+  "include": ["env.d.ts", "**/.vitepress/**/*"],
+  "exclude": ["**/node_modules/**", "**/dist/**", "**/.vitepress/cache/*"]
+}

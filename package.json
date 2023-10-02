@@ -1,0 +1,55 @@
+{
+  "name": "yi-blog",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "个人博客",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development vitepress dev docs --port=8080",
+    "dev": "vitepress dev docs --port 8080 --max-old-space-size=50000",
+    "build": "vitepress build docs",
+    "build:github": "cross-env APP_BASE_PATH=/notes/ pnpm run build",
+    "serve": "vitepress serve docs",
+    "lint": "eslint --cache .",
+    "lint:fix": "nr lint --fix"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@iconify-json/ep": "^1.1.12",
+    "@mdit-vue/shared": "^0.12.1",
+    "@types/lodash-es": "^4.17.9",
+    "@types/spark-md5": "^3.0.2",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.2.2",
+    "@vueuse/core": "^10.4.1",
+    "axios": "^1.5.1",
+    "cross-env": "^7.0.3",
+    "element-plus": "^2.3.14",
+    "lodash-es": "^4.17.21",
+    "medium-zoom": "^1.0.8",
+    "sitemap": "^7.1.1",
+    "spark-md5": "^3.0.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.43.1",
+    "@iconify/json": "^2.2.122",
+    "cloudinary-build-url": "^0.2.4",
+    "eslint": "8.49.0",
+    "lint-staged": "^13.3.0",
+    "sass": "^1.68.0",
+    "typescript": "^5.2.2",
+    "unocss": "^0.55.7",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-icons": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.4.9",
+    "vitepress": "1.0.0-alpha.60",
+    "vue": "^3.3.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
+  }
+}
