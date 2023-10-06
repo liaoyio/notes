@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@8.6.10",
   "description": "个人博客",
   "scripts": {
     "start": "cross-env NODE_ENV=development vitepress dev docs --port=8080",
@@ -11,7 +12,7 @@
     "build:github": "cross-env APP_BASE_PATH=/notes/ pnpm run build",
     "serve": "vitepress serve docs",
     "lint": "eslint --cache .",
-    "lint:fix": "nr lint --fix"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
@@ -32,12 +33,15 @@
     "spark-md5": "^3.0.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.43.1",
+    "@antfu/eslint-config": "^0.42.0",
     "@iconify/json": "^2.2.122",
     "cloudinary-build-url": "^0.2.4",
-    "eslint": "8.49.0",
-    "lint-staged": "^13.3.0",
+    "eslint": "8.50.0",
+    "eslint-plugin-import": "^2.28.1",
+    "lint-staged": "^14.0.0",
     "sass": "^1.68.0",
+    "simple-git": "^3.19.1",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "^5.2.2",
     "unocss": "^0.55.7",
     "unplugin-auto-import": "^0.16.6",
@@ -46,6 +50,9 @@
     "vite": "^4.4.9",
     "vitepress": "1.0.0-alpha.60",
     "vue": "^3.3.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue,md}": [

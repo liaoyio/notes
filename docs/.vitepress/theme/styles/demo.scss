@@ -8,6 +8,9 @@
   transition: background-color 0.5s;
 }
 
+.demo h1{
+  font-size: 18px;
+}
 .demo-source-link {
   color: var(--vp-c-text-2) !important;
   position: absolute;
@@ -45,13 +48,17 @@
 
   button {
     padding: 3px 15px;
-    background-color: var(--vp-c-brand);
+    // background-color: var(--vp-c-brand);
+    // border-bottom: 2px solid var(--vp-c-brand-dark);
+    // text-shadow: 1px 1px 1px var(--vp-c-brand-dark);
+    background-color: #44bd87;
+    text-shadow: 1px 1px 1px #2e8f5c;
+    border-bottom: 2px solid #2e8f5c;
     border: none;
     outline: none;
     color: white;
     margin: 0.5rem 0;
-    border-bottom: 2px solid var(--vp-c-brand-dark);
-    text-shadow: 1px 1px 1px var(--vp-c-brand-dark);
+
     border-radius: 4px;
     font-size: 1rem;
     box-sizing: border-box;
@@ -130,7 +137,7 @@
     display: block;
     font-size: 0.9rem;
     padding: 0.5em 1em 0.4em 1em;
-    border: 1px solid var(--vp-c-divider-light);
+    border: 1px solid #f0efef;
     border-radius: 4px;
     outline: none;
     background: var(--vp-c-bg);
@@ -145,7 +152,7 @@
   }
 
   input:focus {
-    border: 1px solid var(--vp-c-divider-dark-1);
+    border: 1px solid var(--vp-c-border);
   }
 
   pre,

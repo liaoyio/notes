@@ -7,5 +7,3 @@ cache/
 !.eslintrc.cjs
 !.test
 .temp
-
-**/**/vue3.md

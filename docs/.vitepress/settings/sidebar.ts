@@ -120,6 +120,13 @@ function basic() {
         { text: 'Node 开发', link: '/basic/node/' },
       ],
     },
+    {
+      text: 'Vue2',
+      collapsed: false,
+      items: [
+        { text: '常见优化技巧', link: '/basic/vue2/常见优化技巧' },
+      ],
+    },
 
     {
       text: '操作系统 & 网络 & 浏览器',
@@ -465,9 +472,11 @@ function algorithm() {
     {
       text: 'Dynamic Programming 动态规划',
       collapsed: false,
+      link: '/algorithm/dp/',
       items: [
         { text: '62. 不同路径', link: '/algorithm/dp/62.不同路径' },
         { text: '63. 不同路径 II', link: '/algorithm/dp/63.不同路径 II' },
+        { text: '64. 最小路径和', link: '/algorithm/dp/64.最小路径和' },
         { text: '70. 爬楼梯', link: '/algorithm/dp/70.爬楼梯' },
         {
           text: '121. 买卖股票的最佳时机',

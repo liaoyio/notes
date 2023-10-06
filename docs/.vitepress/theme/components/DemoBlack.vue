@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {  onErrorCaptured, ref } from 'vue'
+import { onErrorCaptured, ref } from 'vue'
 
 const props = defineProps<{ path: string }>()
 

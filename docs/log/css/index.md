@@ -29,3 +29,7 @@
 
 ### 2. 使用 text-align:justify 
 <preview path="./demo/text-justify-align2.vue" />
+
+## 文字视差效果
+
+<preview path="./demo/text-parallax.vue" />
