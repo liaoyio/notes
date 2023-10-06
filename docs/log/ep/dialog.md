@@ -161,5 +161,3 @@ const openDialog = () => {
 </template>
 ```
 :::
-
-<preview path="./demo/dialog/Use.vue" />
