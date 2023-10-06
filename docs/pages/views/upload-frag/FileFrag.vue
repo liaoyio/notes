@@ -76,7 +76,7 @@ const downloadFile = (row) => {
   })
 }
 const open = (row) => {
-  window.open(`${API_URL}${row.fileNewName}`)
+  if (window) window.open(`${API_URL}${row.fileNewName}`)
 }
 const onFilter = () => {
   getInfo()
@@ -93,12 +93,7 @@ const onReset = () => {
   <div class="max-w-5xl mx-auto py-20 ">
     <FileFragUpload @refresh="getInfo" />
 
-    <el-form
-      ref="formRef"
-      class="mt-4"
-      :inline="true"
-      :model="state.queryParams"
-    >
+    <el-form ref="formRef" class="mt-4" :inline="true" :model="state.queryParams">
       <el-form-item label="源文件名" prop="fileName">
         <el-input v-model="state.queryParams.fileName" placeholder="请输入源文件名" clearable />
       </el-form-item>
@@ -118,13 +113,7 @@ const onReset = () => {
       </el-form-item>
     </el-form>
 
-    <el-table
-      v-loading="!state.loaded"
-      style="width: 100%"
-      :data="state.list"
-      stripe
-      @sortChange="onSortChange"
-    >
+    <el-table v-loading="!state.loaded" style="width: 100%" :data="state.list" stripe @sortChange="onSortChange">
       <el-table-column prop="id" label="ID" width="180" />
       <el-table-column prop="fileName" label="源文件名" min-width="200" />
       <el-table-column prop="fileNewName" label="现文件名" min-width="220" />
@@ -143,48 +132,29 @@ const onReset = () => {
       <el-table-column prop="createTime" sortable="custom" label="上传日期" width="200" />
       <el-table-column fixed="right" label="操作" min-width="120">
         <template #default="{ row }">
-          <el-button
-            v-if="row.chunkNum === row.uploadedNum" v-no-more-click link type="primary" size="small"
-            @click="open(row)"
-          >
+          <el-button v-if="row.chunkNum === row.uploadedNum" v-no-more-click link type="primary" size="small"
+            @click="open(row)">
             在线观看
           </el-button>
-          <el-button
-            v-if="row.chunkNum === row.uploadedNum" v-no-more-click link type="primary" size="small"
-            @click="downloadFile(row)"
-          >
+          <el-button v-if="row.chunkNum === row.uploadedNum" v-no-more-click link type="primary" size="small"
+            @click="downloadFile(row)">
             下载
           </el-button>
         </template>
       </el-table-column>
     </el-table>
     <div class="flex flex-row-reverse mt-3">
-      <el-pagination
-        v-model:current-page="state.queryParams.pageNum"
-        v-model:page-size="state.queryParams.pageSize"
-        :page-sizes="[10, 20, 50, 100]"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="state.total"
-        @size-change="getInfo"
-        @current-change="getInfo"
-      />
+      <el-pagination v-model:current-page="state.queryParams.pageNum" v-model:page-size="state.queryParams.pageSize"
+        :page-sizes="[10, 20, 50, 100]" layout="total, sizes, prev, pager, next, jumper" :total="state.total"
+        @size-change="getInfo" @current-change="getInfo" />
     </div>
   </div>
 
-  <el-dialog
-    v-model="state.dialogVisible" draggable :close-on-click-modal="false" :close-on-press-escape="false"
-    :show-close="false"
-  >
-    <el-progress
-      :percentage="state.downloadProgress"
-      :stroke-width="15"
-      striped
-      striped-flow
-      :duration="10"
-    />
+  <el-dialog v-model="state.dialogVisible" draggable :close-on-click-modal="false" :close-on-press-escape="false"
+    :show-close="false">
+    <el-progress :percentage="state.downloadProgress" :stroke-width="15" striped striped-flow :duration="10" />
   </el-dialog>
 </template>
 
 <style scoped lang="scss">
-
 </style>

@@ -38,11 +38,10 @@ body {
 
 
 ```js [js]
-
 const sticky = document.querySelector('.sticky')
 const origOffsetY = sticky.offsetTop
 
-const  onScroll = () => sticky.classList.toggle('fixed', window.scrollY >= origOffsetY)
+const onScroll = () => sticky.classList.toggle('fixed', window.scrollY >= origOffsetY)
 
 document.addEventListener('scroll', onScroll)
 ```
@@ -87,7 +86,7 @@ document.addEventListener('scroll', onScroll)
 ```js [js]
 const pin = document.querySelector('.pin')
 
-const onScroll = () =>  {
+const onScroll = () => {
   const scrollY = window.scrollY
   pin.classList.toggle('show', scrollY >= 50)
 }

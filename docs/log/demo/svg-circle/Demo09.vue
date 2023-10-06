@@ -7,7 +7,7 @@ import { onBeforeUnmount, ref } from 'vue'
  * @param {number} strokePercent  有色边框长度占圆周长的百分比(是个小数0-1表示0%-100%)
  */
 function calc(r: number, strokePercent: number, strokeWidth: number) {
-  /**  圆周长*/
+  /** 圆周长 */
   const C = 2 * Math.PI * r
   /** 圆实线边框的长度. 这里设置为周长的80% */
   const stroke = C * strokePercent
@@ -74,40 +74,13 @@ onBeforeUnmount(() => window.clearInterval(flag))
             <stop offset="100%" style="stop-color: yellow" />
           </linearGradient>
         </defs>
-        <circle
-          cx="50"
-          cy="50"
-          :r="r"
-          :stroke-dasharray="`${stroke} ${blankLen}`"
-          stroke="rgba(255, 255, 255, 0.4)"
-          :stroke-width="strokeWidth"
-          fill="none"
-          :stroke-dashoffset="offset"
-          stroke-linecap="round"
-        />
-        <circle
-          cx="50"
-          cy="50"
-          :r="r2"
-          :stroke-dasharray="`${strokeRef} ${blankLenRef}`"
-          stroke="url(#gradient)"
-          :stroke-width="strokeWidth2"
-          fill="none"
-          :stroke-dashoffset="offset2"
-          stroke-linecap="round"
-        />
+        <circle cx="50" cy="50" :r="r" :stroke-dasharray="`${stroke} ${blankLen}`" stroke="rgba(255, 255, 255, 0.4)"
+          :stroke-width="strokeWidth" fill="none" :stroke-dashoffset="offset" stroke-linecap="round" />
+        <circle cx="50" cy="50" :r="r2" :stroke-dasharray="`${strokeRef} ${blankLenRef}`" stroke="url(#gradient)"
+          :stroke-width="strokeWidth2" fill="none" :stroke-dashoffset="offset2" stroke-linecap="round" />
 
-        <circle
-          cx="50"
-          cy="50"
-          :r="r3"
-          :stroke-dasharray="`${stroke4Ref} ${blankLen4Ref}`"
-          stroke="url(#gradient)"
-          :stroke-width="strokeWidth3"
-          fill="none"
-          :stroke-dashoffset="-80"
-          stroke-linecap="round"
-        />
+        <circle cx="50" cy="50" :r="r3" :stroke-dasharray="`${stroke4Ref} ${blankLen4Ref}`" stroke="url(#gradient)"
+          :stroke-width="strokeWidth3" fill="none" :stroke-dashoffset="-80" stroke-linecap="round" />
       </svg>
     </div>
   </div>

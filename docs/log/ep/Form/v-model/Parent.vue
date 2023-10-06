@@ -16,10 +16,10 @@ watch(fromData, (newValue) => {
   console.log('\n ---- Parent.vue ---- \n fromData -----> 值改变了', newValue, '\n')
 })
 
-onMounted(()=>{
+onMounted(() => {
   loading.value = true
-  setTimeout(()=>{
-    fromData =  reactive({
+  setTimeout(() => {
+    fromData = reactive({
       name: 'Yi',
       age: 25,
       phoneNumber: '13246566775',

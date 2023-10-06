@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { Ref, UnwrapRef } from 'vue'
-import { onMounted, reactive, ref } from 'vue'
+import { reactive } from 'vue'
 import Child from './ErrChild.vue'
 
 const fromData = reactive({

@@ -133,12 +133,12 @@ const age = computed({
 
 const phoneNumber = computed({
   get: () => props.formData.phoneNumber,
-  set: newVal =>  emit('update:formData', { ...props.modelValue, phoneNumber: newVal })
+  set: newVal => emit('update:formData', { ...props.modelValue, phoneNumber: newVal })
 })
 
 const remark = computed({
   get: () => props.formData.remark,
-  set: newVal =>  emit('update:formData', { ...props.modelValue, remark: newVal })
+  set: newVal => emit('update:formData', { ...props.modelValue, remark: newVal })
 })
 ```
 
@@ -366,7 +366,7 @@ import Child from './Child.vue'
 
 const loading = ref(true)
 
-const fromData = ref({  // [!code warning] // 这里必须使用ref定义，否则无法通过 proxy 拦截
+const fromData = ref({ // [!code warning] // 这里必须使用ref定义，否则无法通过 proxy 拦截
   name: '',
   age: '',
   phoneNumber: '',
@@ -377,14 +377,14 @@ watch(fromData, (newValue) => {
   console.log('\n ---- Parent.vue ---- \n fromData -----> 值改变了', newValue, '\n')
 })
 
-onMounted(()=>{
+onMounted(() => {
   loading.value = true
-  setTimeout(()=> {
+  setTimeout(() => {
     fromData.value = {
       name: 'Yi',
       age: '25',
       phoneNumber: '13246566775',
-      remark: 'Hello world~', 
+      remark: 'Hello world~',
     }
     loading.value = false
   }, 3000)
@@ -430,12 +430,12 @@ export function useVModel<P extends object, K extends keyof P>(
   const emit_name = `update:${_name}`
 
   const data = computed({
-    get:() => {
+    get: () => {
       /**  如果缓存中有对应的代理就不创建新的代理了 */
-      if (cacheMap.has(props[_name]))  return cacheMap.get(props[_name])
+      if (cacheMap.has(props[_name])) return cacheMap.get(props[_name])
 
       const proxy = new Proxy(props[_name], {
-        get:(target, key) => Reflect.get(target, key),
+        get: (target, key) => Reflect.get(target, key),
         set: (target, key, value) => {
           emit(emit_name, { ...target, [key]: value })
           return true
@@ -463,7 +463,7 @@ useVModel(props, 'formData', emit)
 import { ref, watch } from 'vue'
 import type { UnwrapRef } from 'vue'
 
-export  function useVModel<
+export function useVModel<
   P extends object,
   N extends keyof P,
 >(
@@ -506,14 +506,14 @@ import type { FormInstance, FormRules } from 'element-plus'
 import { useVModel } from '@vueuse/core' // [!code focus]
 
 const props = defineProps({
-  formData: { 
+  formData: {
     type: Object as PropType<{ name: string; age: string }>,
-    required: true 
+    required: true
   }
 })
 
 const emit = defineEmits(['update:formData', 'submit'])
-const form =  useVModel(props, 'formData', emit) // [!code focus]
+const form = useVModel(props, 'formData', emit) // [!code focus]
 // console.log(form.value) // props.formData // [!code focus]
 // form.value = { name: 'yi', age: '25'} // emit('update:formData', { name: 'yi', age: '25'}) // [!code focus]
 </script>
