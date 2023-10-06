@@ -1,0 +1,1 @@
+import{f as t,h as s,i as a,j as _,k as o,t as n,l as p,_ as r}from"./framework.1a1d6641.js";const l=t({__name:"Badge",props:{text:{},type:{}},setup(c){return(e,d)=>(s(),a("span",{class:p(["VPBadge",e.type??"tip"])},[_(e.$slots,"default",{},()=>[o(n(e.text),1)],!0)],2))}});const u=r(l,[["__scopeId","data-v-d01e489a"]]);export{u as _};
