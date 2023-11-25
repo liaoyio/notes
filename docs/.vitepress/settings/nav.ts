@@ -23,7 +23,8 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '软件 & 配置',
         items: [
-          { text: 'Mac 平台', link: '/tools/01_mac' },
+          { text: 'Mac 常用软件', link: '/tools/01_mac' },
+          { text: 'Mac 前端开发环境', link: '/tools/mac-dev' },
           { text: 'Visual Studio Code 配置', link: '/tools/02_vscode' },
         ],
       },

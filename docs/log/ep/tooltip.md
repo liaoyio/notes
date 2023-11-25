@@ -80,4 +80,4 @@ import TooltipUse from './demo/TooltipUse.vue';
 <DemoBlack path="TooltipUse.vue">
   <TooltipUse/>
 </DemoBlack> -->
-
+<preview path="./demo/TooltipUse.vue"  />

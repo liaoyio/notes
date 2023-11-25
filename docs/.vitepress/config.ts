@@ -42,6 +42,10 @@ export default defineConfig({
     sidebarMenuLabel: '归档',
     darkModeSwitchLabel: '外观',
     lastUpdatedText: '上次更新',
+    editLink: {
+      pattern: 'https://github.com/liaoyio/notes/tree/main/docs/:path',
+      text: '在 GitHub 上查看此页',
+    },
     // footer: { copyright: `版权所有 © 2022-${new Date().getFullYear()} Yi` },
     nav,
     sidebar,

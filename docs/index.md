@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 前端导航
-      link: /nav
+      link: /nav/
     - theme: alt
       text: 开发工具 🔧
       link: /nav/dev

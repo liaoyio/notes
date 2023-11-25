@@ -8,7 +8,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: '软件 & 配置',
       items: [
-        { text: 'Mac 平台', link: '/tools/01_mac' },
+        { text: 'Mac 常用软件', link: '/tools/01_mac' },
+        { text: 'Mac 前端开发环境', link: '/tools/mac-dev' },
         { text: 'Visual Studio Code 配置', link: '/tools/02_vscode' },
       ],
     },
@@ -125,6 +126,7 @@ function basic() {
       collapsed: false,
       items: [
         { text: '常见优化技巧', link: '/basic/vue2/常见优化技巧' },
+        { text: 'vue监听子组件生命周期', link: '/basic/vue2/vue监听子组件生命周期' },
       ],
     },
 

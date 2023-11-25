@@ -37,7 +37,6 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
-
   {
     title: '时间处理',
     items: [
@@ -128,6 +127,17 @@ export const NAV_DATA: NavData[] = [
     ],
   },
   {
+    title: '网页文件预览',
+    items: [
+      {
+        title: 'vue-office',
+        desc: '更易用的文件预览, 支持docx、xlsx、pdf文件',
+        link: 'https://501351981.github.io/vue-office/examples/docs/',
+        badge: 'vue',
+      },
+    ],
+  },
+  {
     title: '精度处理',
     items: [
       {
@@ -153,11 +163,16 @@ export const NAV_DATA: NavData[] = [
         link: 'https://mattboldt.com/demos/typed-js/',
       },
       {
+        title: 'AutoAnimat',
+        desc: '只需一行代码即可为您的应用添加动作',
+        icon: 'https://auto-animate.formkit.com/assets/favicon.6d15a86f.ico',
+        link: 'https://github.com/formkit/auto-animate',
+      },
+      {
         title: 'countup.js',
         desc: '数字滚动效果',
         link: 'https://inorganik.github.io/countUp.js/',
       },
-
       {
         title: 'tween.js',
         desc: '补间动画引擎',
@@ -199,7 +214,6 @@ export const NAV_DATA: NavData[] = [
       },
     ],
   },
-
   {
     title: '特效',
     items: [
@@ -207,6 +221,11 @@ export const NAV_DATA: NavData[] = [
         title: 'canvas-confetti',
         desc: '五彩纸屑特效',
         link: 'https://www.kirilv.com/canvas-confetti/',
+      },
+      {
+        title: '在线 🌍',
+        desc: '浏览器嵌入一个全球地区，可滚动，可标点，可旋转',
+        link: 'https://api.iconify.design/vscode-icons:file-type-vercel.svg?color=%23888888',
       },
     ],
   },
@@ -423,6 +442,28 @@ export const NAV_DATA: NavData[] = [
         desc: '基于swiper封装的Vue组件,支持 Vue 2 和 Vue 3',
         badge: 'vue',
         link: 'https://github.com/surmon-china/vue-awesome-swiper',
+      },
+    ],
+  },
+  {
+    title: '网页嵌入编辑器',
+    items: [
+      {
+        title: 'codemirror-editor-vue3',
+        desc: '基于 Codemirror 5开发的Vue3在线IDE插件，仅支持 vue3.',
+        link: 'https://github.com/rennzhang/codemirror-editor-vue3',
+        icon: 'https://codemirror.net/style/logo.svg',
+      },
+    ],
+  },
+  {
+    title: '网页活动',
+    items: [
+      {
+        title: 'lucky-canvas抽奖插件',
+        desc: ' 基于 TS + Canvas 开发的【大转盘 / 九宫格 / 老虎机】抽奖插件',
+        link: 'https://100px.net/demo/more.html',
+        icon: 'https://100px.net/logo.png',
       },
     ],
   },
@@ -901,19 +942,34 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://api.iconify.design/logos:astro-icon.svg?color=%23888888',
       },
       {
-        icon: 'https://api.iconify.design/skill-icons:vite-dark.svg?color=%23888888',
+        icon: 'https://api.iconify.design/logos:vitejs.svg?color=%23888888',
         title: 'VitePress',
         badge: 'VitePress',
         desc: '由 Vite 和 Vue 驱动的静态网站生成器',
         link: 'https://vitepress.dev',
       },
       {
-        icon: 'https://api.iconify.design/skill-icons:vuejs-dark.svg?color=%23888888',
+        icon: 'https://api.iconify.design/logos:vue.svg?color=%23888888',
         title: 'VuePress',
         badge: 'VuePress',
         desc: 'Vue 驱动的静态网站生成器',
         link: 'https://vuepress.vuejs.org/zh',
       },
+      {
+        icon: 'https://nextra.site/favicon.svg',
+        title: 'nextra',
+        badge: 'nextra',
+        desc: '使用 Next.js 和 MDX制作精美的网站',
+        link: 'https://rspress.dev/zh/',
+      },
+      {
+        icon: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/uhbfnupenuhf/rspress/rspress-logo.png',
+        title: 'Rspress',
+        badge: 'Rspress',
+        desc: '基于Rspack的静态站点生成器，基于React框架进行渲染',
+        link: 'https://nextra.site/',
+      },
+
       {
         icon: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
         title: 'dumi',
